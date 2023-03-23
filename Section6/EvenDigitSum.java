@@ -7,18 +7,15 @@ public class EvenDigitSum {
 
   public static int getEvenDigitSum(int number) {
     if(number < 0) return -1;
+
     int totalSum = 0;
     int lastDigit;
     while(number > 0){
       lastDigit = number % 10;
-      if(lastDigit % 2 == 0){
-        totalSum += lastDigit;
-      }
-
+      totalSum += (lastDigit % 2 == 0) ? lastDigit : 0;
       number /= 10;
     }
-
+    
     return totalSum;
-
   }
 }
