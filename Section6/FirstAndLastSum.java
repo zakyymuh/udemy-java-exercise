@@ -15,7 +15,6 @@ public class FirstAndLastSum {
       number /= 10;
     }
 
-    int firstDigit = number % 10;
-    return firstDigit + lastDigit;
+    return number + lastDigit;
   }
 }
